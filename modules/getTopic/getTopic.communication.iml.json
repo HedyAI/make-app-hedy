@@ -1,0 +1,7 @@
+{
+    "url": "/topics/{{parameters.topicId}}",
+    "method": "GET",
+    "response": {
+        "output": "{{body}}"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "url": "/sessions/{{parameters.sessionId}}",
+    "method": "GET",
+    "response": {
+        "output": "{{body}}"
+    }
+}

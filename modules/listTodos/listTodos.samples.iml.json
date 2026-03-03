@@ -1,0 +1,7 @@
+{
+    "id": "todo_001",
+    "sessionId": "sess_abc123",
+    "text": "Prepare demo for stakeholders",
+    "dueDate": "2026-03-10",
+    "completed": false
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "name": "limit",
+        "type": "uinteger",
+        "label": "Limit",
+        "help": "Maximum number of sessions to return.",
+        "default": 10
+    }
+]

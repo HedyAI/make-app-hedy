@@ -1,0 +1,15 @@
+[
+    {
+        "name": "events",
+        "type": "select",
+        "label": "Event",
+        "required": true,
+        "multiple": true,
+        "options": [
+            {"label": "Session Created", "value": "session.created"},
+            {"label": "Session Ended", "value": "session.ended"},
+            {"label": "Highlight Created", "value": "highlight.created"},
+            {"label": "Todo Exported", "value": "todo.exported"}
+        ]
+    }
+]

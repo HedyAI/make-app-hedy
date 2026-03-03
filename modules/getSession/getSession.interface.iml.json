@@ -1,0 +1,32 @@
+[
+    {"name": "id", "type": "text", "label": "Session ID"},
+    {"name": "title", "type": "text", "label": "Title"},
+    {"name": "startTime", "type": "date", "label": "Start Time"},
+    {"name": "endTime", "type": "date", "label": "End Time"},
+    {"name": "duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "transcript", "type": "text", "label": "Transcript"},
+    {"name": "cleaned_transcript", "type": "text", "label": "Cleaned Transcript"},
+    {"name": "meeting_minutes", "type": "text", "label": "Meeting Minutes"},
+    {"name": "recap", "type": "text", "label": "Recap"},
+    {
+        "name": "highlights", "type": "array", "label": "Highlights",
+        "spec": [
+            {"name": "id", "type": "text", "label": "Highlight ID"},
+            {"name": "title", "type": "text", "label": "Title"},
+            {"name": "rawQuote", "type": "text", "label": "Raw Quote"},
+            {"name": "cleanedQuote", "type": "text", "label": "Cleaned Quote"},
+            {"name": "mainIdea", "type": "text", "label": "Main Idea"},
+            {"name": "aiInsight", "type": "text", "label": "AI Insight"},
+            {"name": "timestamp", "type": "date", "label": "Timestamp"}
+        ]
+    },
+    {
+        "name": "user_todos", "type": "array", "label": "Todos",
+        "spec": [
+            {"name": "id", "type": "text", "label": "Todo ID"},
+            {"name": "text", "type": "text", "label": "Text"},
+            {"name": "dueDate", "type": "date", "label": "Due Date"},
+            {"name": "completed", "type": "boolean", "label": "Completed"}
+        ]
+    }
+]

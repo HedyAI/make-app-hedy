@@ -1,0 +1,10 @@
+[
+    {"name": "id", "type": "text", "label": "Topic ID"},
+    {"name": "name", "type": "text", "label": "Name"},
+    {"name": "description", "type": "text", "label": "Description"},
+    {"name": "color", "type": "text", "label": "Color"},
+    {"name": "iconName", "type": "text", "label": "Icon Name"},
+    {"name": "topicContext", "type": "text", "label": "Topic Context"},
+    {"name": "createdAt", "type": "date", "label": "Created At"},
+    {"name": "updatedAt", "type": "date", "label": "Updated At"}
+]

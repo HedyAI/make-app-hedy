@@ -1,0 +1,19 @@
+{
+    "url": "/sessions",
+    "method": "GET",
+    "qs": {
+        "limit": "{{ifempty(parameters.limit, 10)}}",
+        "format": "standard"
+    },
+    "response": {
+        "output": "{{item}}",
+        "iterate": "{{body.data}}",
+        "limit": "{{ifempty(parameters.limit, 10)}}"
+    },
+    "pagination": {
+        "qs": {
+            "after": "{{body.pagination.next}}"
+        },
+        "condition": "{{body.pagination.hasMore}}"
+    }
+}

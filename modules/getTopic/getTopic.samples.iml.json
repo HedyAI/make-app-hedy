@@ -1,0 +1,10 @@
+{
+    "id": "topic_xyz",
+    "name": "Team Meetings",
+    "description": "Weekly standups and team syncs",
+    "color": "#4A90D9",
+    "iconName": "group",
+    "topicContext": "Focus on action items and blockers",
+    "createdAt": "2026-01-15T10:00:00Z",
+    "updatedAt": "2026-03-01T08:30:00Z"
+}

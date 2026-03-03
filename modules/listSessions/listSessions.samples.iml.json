@@ -1,0 +1,8 @@
+{
+    "id": "sess_abc123",
+    "title": "Weekly Team Standup",
+    "startTime": "2026-03-03T14:00:00Z",
+    "duration": 1800,
+    "topicId": "topic_xyz",
+    "topicName": "Team Meetings"
+}

@@ -1,0 +1,8 @@
+[
+    {"name": "id", "type": "text", "label": "Session ID"},
+    {"name": "title", "type": "text", "label": "Title"},
+    {"name": "startTime", "type": "date", "label": "Start Time"},
+    {"name": "duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "topicId", "type": "text", "label": "Topic ID"},
+    {"name": "topicName", "type": "text", "label": "Topic Name"}
+]

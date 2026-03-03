@@ -1,0 +1,17 @@
+{
+    "event": "session.ended",
+    "timestamp": "2026-03-03T14:30:00Z",
+    "data": {
+        "id": "sess_abc123",
+        "title": "Weekly Team Standup",
+        "sessionId": "sess_abc123",
+        "startTime": "2026-03-03T14:00:00Z",
+        "endTime": "2026-03-03T14:30:00Z",
+        "duration": 1800,
+        "transcript": "Good morning everyone...",
+        "recap": "Team discussed Q1 priorities and blockers.",
+        "meeting_minutes": "## Key Decisions\n- Launch date set for March 15",
+        "topicId": "topic_xyz",
+        "topicName": "Team Meetings"
+    }
+}

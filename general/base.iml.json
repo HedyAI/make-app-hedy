@@ -1,0 +1,26 @@
+{
+    "baseUrl": "https://api.hedy.bot",
+    "headers": {
+        "Authorization": "Bearer {{connection.apiKey}}",
+        "Content-Type": "application/json"
+    },
+    "response": {
+        "error": {
+            "message": "[{{statusCode}}] {{body.error.message}}",
+            "type": "RuntimeError",
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "Invalid or expired API key. Generate a new one in Hedy → Settings → API."
+            },
+            "429": {
+                "type": "RateLimitError",
+                "message": "Rate limit exceeded. Please wait before retrying."
+            }
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}

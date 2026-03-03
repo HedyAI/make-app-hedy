@@ -1,0 +1,7 @@
+{
+    "id": "topic_xyz",
+    "name": "Team Meetings",
+    "description": "Weekly standups and team syncs",
+    "color": "#4A90D9",
+    "iconName": "group"
+}

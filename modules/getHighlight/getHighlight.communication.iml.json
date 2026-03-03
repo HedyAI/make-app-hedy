@@ -1,0 +1,7 @@
+{
+    "url": "/highlights/{{parameters.highlightId}}",
+    "method": "GET",
+    "response": {
+        "output": "{{body}}"
+    }
+}

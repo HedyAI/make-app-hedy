@@ -1,0 +1,9 @@
+[
+    {
+        "name": "sessionId",
+        "type": "text",
+        "label": "Session ID",
+        "help": "The ID of the session (e.g., sess_abc123). You can get this from the Watch Events trigger or List Sessions module.",
+        "required": true
+    }
+]

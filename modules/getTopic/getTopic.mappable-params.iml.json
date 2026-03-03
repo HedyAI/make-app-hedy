@@ -1,0 +1,9 @@
+[
+    {
+        "name": "topicId",
+        "type": "text",
+        "label": "Topic ID",
+        "help": "The ID of the topic.",
+        "required": true
+    }
+]

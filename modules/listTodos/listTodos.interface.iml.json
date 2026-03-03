@@ -1,0 +1,7 @@
+[
+    {"name": "id", "type": "text", "label": "Todo ID"},
+    {"name": "sessionId", "type": "text", "label": "Session ID"},
+    {"name": "text", "type": "text", "label": "Text"},
+    {"name": "dueDate", "type": "date", "label": "Due Date"},
+    {"name": "completed", "type": "boolean", "label": "Completed"}
+]

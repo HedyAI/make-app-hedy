@@ -1,0 +1,24 @@
+{
+    "url": "https://api.hedy.bot/me",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer {{parameters.apiKey}}"
+    },
+    "response": {
+        "data": {
+            "apiKey": "{{parameters.apiKey}}"
+        },
+        "metadata": {
+            "type": "email",
+            "value": "{{body.email}}"
+        },
+        "error": {
+            "message": "[{{statusCode}}] {{body.error.message}}"
+        }
+    },
+    "log": {
+        "sanitize": [
+            "request.headers.authorization"
+        ]
+    }
+}

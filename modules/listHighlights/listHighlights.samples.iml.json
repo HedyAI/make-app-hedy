@@ -1,0 +1,10 @@
+{
+    "id": "high_def456",
+    "sessionId": "sess_abc123",
+    "timestamp": "2026-03-03T14:12:00Z",
+    "title": "Launch Date Decision",
+    "rawQuote": "let's go with march 15th for the launch",
+    "cleanedQuote": "Let's go with March 15th for the launch.",
+    "mainIdea": "Launch date confirmed for March 15",
+    "aiInsight": "Team aligned on an aggressive timeline."
+}

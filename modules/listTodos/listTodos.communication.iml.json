@@ -1,0 +1,9 @@
+{
+    "url": "/todos",
+    "method": "GET",
+    "response": {
+        "output": "{{item}}",
+        "iterate": "{{body}}",
+        "limit": "{{ifempty(parameters.limit, 10)}}"
+    }
+}

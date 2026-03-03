@@ -1,0 +1,15 @@
+[
+    {"name": "event", "type": "text", "label": "Event Type"},
+    {"name": "timestamp", "type": "date", "label": "Timestamp"},
+    {"name": "data.id", "type": "text", "label": "Resource ID"},
+    {"name": "data.title", "type": "text", "label": "Title"},
+    {"name": "data.sessionId", "type": "text", "label": "Session ID"},
+    {"name": "data.startTime", "type": "date", "label": "Start Time"},
+    {"name": "data.endTime", "type": "date", "label": "End Time"},
+    {"name": "data.duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "data.transcript", "type": "text", "label": "Transcript"},
+    {"name": "data.recap", "type": "text", "label": "Recap"},
+    {"name": "data.meeting_minutes", "type": "text", "label": "Meeting Minutes"},
+    {"name": "data.topicId", "type": "text", "label": "Topic ID"},
+    {"name": "data.topicName", "type": "text", "label": "Topic Name"}
+]

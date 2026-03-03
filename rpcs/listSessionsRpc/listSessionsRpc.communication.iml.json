@@ -1,0 +1,15 @@
+{
+    "url": "/sessions",
+    "method": "GET",
+    "qs": {
+        "limit": "50",
+        "format": "standard"
+    },
+    "response": {
+        "iterate": "{{body.data}}",
+        "output": {
+            "label": "{{item.title}}",
+            "value": "{{item.id}}"
+        }
+    }
+}

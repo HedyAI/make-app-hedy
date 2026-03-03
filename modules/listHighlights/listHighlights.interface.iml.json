@@ -1,0 +1,10 @@
+[
+    {"name": "id", "type": "text", "label": "Highlight ID"},
+    {"name": "sessionId", "type": "text", "label": "Session ID"},
+    {"name": "timestamp", "type": "date", "label": "Timestamp"},
+    {"name": "title", "type": "text", "label": "Title"},
+    {"name": "rawQuote", "type": "text", "label": "Raw Quote"},
+    {"name": "cleanedQuote", "type": "text", "label": "Cleaned Quote"},
+    {"name": "mainIdea", "type": "text", "label": "Main Idea"},
+    {"name": "aiInsight", "type": "text", "label": "AI Insight"}
+]

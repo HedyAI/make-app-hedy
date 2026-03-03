@@ -1,0 +1,233 @@
+{
+    "fileVersion": 1,
+    "generalCodeFiles": {
+        "base": "general/base.iml.json",
+        "common": "general/common.json",
+        "readme": "README.md",
+        "groups": "modules/groups.json"
+    },
+    "components": {
+        "connection": {
+            "apiKey": {
+                "codeFiles": {
+                    "communication": "connections/apiKey/apiKey.communication.iml.json",
+                    "params": "connections/apiKey/apiKey.params.iml.json"
+                }
+            }
+        },
+        "webhook": {
+            "hedyEvents": {
+                "codeFiles": {
+                    "communication": "webhooks/hedyEvents/hedyEvents.communication.iml.json",
+                    "params": "webhooks/hedyEvents/hedyEvents.params.iml.json",
+                    "attach": "webhooks/hedyEvents/hedyEvents.attach.iml.json",
+                    "detach": "webhooks/hedyEvents/hedyEvents.detach.iml.json"
+                }
+            }
+        },
+        "module": {
+            "watchEvents": {
+                "moduleType": "instant_trigger",
+                "label": "Watch Events",
+                "description": "Triggers when a selected event occurs in Hedy (new session, highlight, etc.)",
+                "webhook": "hedyEvents",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/watchEvents/watchEvents.communication.iml.json",
+                    "mappableParams": "modules/watchEvents/watchEvents.mappable-params.iml.json",
+                    "staticParams": "modules/watchEvents/watchEvents.static-params.iml.json",
+                    "interface": "modules/watchEvents/watchEvents.interface.iml.json",
+                    "samples": "modules/watchEvents/watchEvents.samples.iml.json"
+                }
+            },
+            "getSession": {
+                "moduleType": "action",
+                "label": "Get a Session",
+                "description": "Retrieves detailed information about a specific session, including transcript, highlights, and todos.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/getSession/getSession.communication.iml.json",
+                    "mappableParams": "modules/getSession/getSession.mappable-params.iml.json",
+                    "interface": "modules/getSession/getSession.interface.iml.json",
+                    "samples": "modules/getSession/getSession.samples.iml.json"
+                }
+            },
+            "listSessions": {
+                "moduleType": "search",
+                "label": "List Sessions",
+                "description": "Returns a list of sessions from your Hedy account.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/listSessions/listSessions.communication.iml.json",
+                    "mappableParams": "modules/listSessions/listSessions.mappable-params.iml.json",
+                    "interface": "modules/listSessions/listSessions.interface.iml.json",
+                    "samples": "modules/listSessions/listSessions.samples.iml.json"
+                }
+            },
+            "listHighlights": {
+                "moduleType": "search",
+                "label": "List Highlights",
+                "description": "Returns a list of highlights across all sessions.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/listHighlights/listHighlights.communication.iml.json",
+                    "mappableParams": "modules/listHighlights/listHighlights.mappable-params.iml.json",
+                    "interface": "modules/listHighlights/listHighlights.interface.iml.json",
+                    "samples": "modules/listHighlights/listHighlights.samples.iml.json"
+                }
+            },
+            "getHighlight": {
+                "moduleType": "action",
+                "label": "Get a Highlight",
+                "description": "Retrieves details of a specific highlight.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/getHighlight/getHighlight.communication.iml.json",
+                    "mappableParams": "modules/getHighlight/getHighlight.mappable-params.iml.json",
+                    "interface": "modules/getHighlight/getHighlight.interface.iml.json",
+                    "samples": "modules/getHighlight/getHighlight.samples.iml.json"
+                }
+            },
+            "listTodos": {
+                "moduleType": "search",
+                "label": "List Todos",
+                "description": "Returns todos across all sessions.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/listTodos/listTodos.communication.iml.json",
+                    "mappableParams": "modules/listTodos/listTodos.mappable-params.iml.json",
+                    "interface": "modules/listTodos/listTodos.interface.iml.json",
+                    "samples": "modules/listTodos/listTodos.samples.iml.json"
+                }
+            },
+            "listTopics": {
+                "moduleType": "search",
+                "label": "List Topics",
+                "description": "Returns all topics in your Hedy account.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/listTopics/listTopics.communication.iml.json",
+                    "mappableParams": "modules/listTopics/listTopics.mappable-params.iml.json",
+                    "interface": "modules/listTopics/listTopics.interface.iml.json",
+                    "samples": "modules/listTopics/listTopics.samples.iml.json"
+                }
+            },
+            "getTopic": {
+                "moduleType": "action",
+                "label": "Get a Topic",
+                "description": "Retrieves details of a specific topic.",
+                "actionCrud": "read",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/getTopic/getTopic.communication.iml.json",
+                    "mappableParams": "modules/getTopic/getTopic.mappable-params.iml.json",
+                    "interface": "modules/getTopic/getTopic.interface.iml.json",
+                    "samples": "modules/getTopic/getTopic.samples.iml.json"
+                }
+            },
+            "makeAnApiCall": {
+                "moduleType": "universal",
+                "label": "Make an API Call",
+                "description": "Performs an arbitrary API call to Hedy. Use for endpoints not covered by other modules.",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "modules/makeAnApiCall/makeAnApiCall.communication.iml.json"
+                }
+            }
+        },
+        "rpc": {
+            "listTopicsRpc": {
+                "label": "List Topics",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "rpcs/listTopicsRpc/listTopicsRpc.communication.iml.json"
+                }
+            },
+            "listSessionsRpc": {
+                "label": "List Sessions",
+                "connection": "apiKey",
+                "codeFiles": {
+                    "communication": "rpcs/listSessionsRpc/listSessionsRpc.communication.iml.json"
+                }
+            }
+        }
+    },
+    "origins": [
+        {
+            "label": "Production",
+            "baseUrl": "https://us2.make.com/api",
+            "appId": "hedy-p0dkfb",
+            "appVersion": 1,
+            "apikeyFile": ".secrets/apikey",
+            "idMapping": {
+                "connection": [
+                    {
+                        "local": "apiKey",
+                        "remote": "hedy-p0dkfb"
+                    }
+                ],
+                "module": [
+                    {
+                        "local": "watchEvents",
+                        "remote": "watchEvents"
+                    },
+                    {
+                        "local": "getSession",
+                        "remote": "getSession"
+                    },
+                    {
+                        "local": "listSessions",
+                        "remote": "listSessions"
+                    },
+                    {
+                        "local": "listHighlights",
+                        "remote": "listHighlights"
+                    },
+                    {
+                        "local": "getHighlight",
+                        "remote": "getHighlight"
+                    },
+                    {
+                        "local": "listTodos",
+                        "remote": "listTodos"
+                    },
+                    {
+                        "local": "listTopics",
+                        "remote": "listTopics"
+                    },
+                    {
+                        "local": "getTopic",
+                        "remote": "getTopic"
+                    },
+                    {
+                        "local": "makeAnApiCall",
+                        "remote": "makeAnApiCall"
+                    }
+                ],
+                "function": [],
+                "rpc": [
+                    {
+                        "local": "listTopicsRpc",
+                        "remote": "listTopicsRpc"
+                    },
+                    {
+                        "local": "listSessionsRpc",
+                        "remote": "listSessionsRpc"
+                    }
+                ],
+                "webhook": [
+                    {
+                        "local": "hedyEvents",
+                        "remote": "hedy-p0dkfb"
+                    }
+                ]
+            }
+        }
+    ]
+}
