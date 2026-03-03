@@ -29,7 +29,7 @@
             "watchEvents": {
                 "moduleType": "instant_trigger",
                 "label": "Watch Events",
-                "description": "Triggers when a selected event occurs in Hedy (new session, highlight, etc.)",
+                "description": "Triggers when an event occurs in Hedy.",
                 "webhook": "hedyEvents",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -43,7 +43,7 @@
             "getSession": {
                 "moduleType": "action",
                 "label": "Get a Session",
-                "description": "Retrieves detailed information about a specific session, including transcript, highlights, and todos.",
+                "description": "Returns information about a specific session by its ID, including transcript, highlights, and todos.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -56,7 +56,7 @@
             "listSessions": {
                 "moduleType": "search",
                 "label": "List Sessions",
-                "description": "Returns a list of sessions from your Hedy account.",
+                "description": "Returns a list of sessions.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -69,7 +69,7 @@
             "listHighlights": {
                 "moduleType": "search",
                 "label": "List Highlights",
-                "description": "Returns a list of highlights across all sessions.",
+                "description": "Returns a list of highlights.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -82,7 +82,7 @@
             "getHighlight": {
                 "moduleType": "action",
                 "label": "Get a Highlight",
-                "description": "Retrieves details of a specific highlight.",
+                "description": "Returns information about a specific highlight by its ID.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -95,7 +95,7 @@
             "listTodos": {
                 "moduleType": "search",
                 "label": "List Todos",
-                "description": "Returns todos across all sessions.",
+                "description": "Returns a list of todos.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -108,7 +108,7 @@
             "listTopics": {
                 "moduleType": "search",
                 "label": "List Topics",
-                "description": "Returns all topics in your Hedy account.",
+                "description": "Returns a list of topics.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -121,7 +121,7 @@
             "getTopic": {
                 "moduleType": "action",
                 "label": "Get a Topic",
-                "description": "Retrieves details of a specific topic.",
+                "description": "Returns information about a specific topic by its ID.",
                 "actionCrud": "read",
                 "connection": "apiKey",
                 "codeFiles": {
@@ -134,10 +134,13 @@
             "makeAnApiCall": {
                 "moduleType": "universal",
                 "label": "Make an API Call",
-                "description": "Performs an arbitrary API call to Hedy. Use for endpoints not covered by other modules.",
+                "description": "Sends a custom API call to Hedy. You can use this to call endpoints that aren't covered by existing modules.",
                 "connection": "apiKey",
                 "codeFiles": {
-                    "communication": "modules/makeAnApiCall/makeAnApiCall.communication.iml.json"
+                    "communication": "modules/makeAnApiCall/makeAnApiCall.communication.iml.json",
+                    "mappableParams": "modules/makeAnApiCall/makeAnApiCall.mappable-params.iml.json",
+                    "interface": "modules/makeAnApiCall/makeAnApiCall.interface.iml.json",
+                    "samples": "modules/makeAnApiCall/makeAnApiCall.samples.iml.json"
                 }
             }
         },

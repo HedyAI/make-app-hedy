@@ -1,1 +1,14 @@
-{}
+{
+    "url": "{{parameters.url}}",
+    "method": "{{parameters.method}}",
+    "qs": "{{toCollection(parameters.qs, 'key', 'value')}}",
+    "body": "{{parameters.body}}",
+    "type": "{{ifempty(parameters.bodyType, 'json')}}",
+    "response": {
+        "output": {
+            "statusCode": "{{statusCode}}",
+            "headers": "{{headers}}",
+            "body": "{{body}}"
+        }
+    }
+}

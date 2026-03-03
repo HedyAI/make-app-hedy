@@ -3,6 +3,7 @@
         "name": "events",
         "type": "select",
         "label": "Event",
+        "help": "Select the event types you want to receive notifications for.",
         "required": true,
         "multiple": true,
         "options": [

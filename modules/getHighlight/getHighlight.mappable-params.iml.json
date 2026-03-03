@@ -3,7 +3,7 @@
         "name": "highlightId",
         "type": "text",
         "label": "Highlight ID",
-        "help": "The ID of the highlight (e.g., high_def456).",
+        "help": "The ID of the highlight. You can get this from the List Highlights module or Watch Events trigger.",
         "required": true
     }
 ]

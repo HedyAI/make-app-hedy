@@ -3,7 +3,7 @@
         "name": "limit",
         "type": "uinteger",
         "label": "Limit",
-        "help": "Maximum number of todos to return.",
+        "help": "Maximum number of results to return and work with during one execution cycle.",
         "default": 10
     }
 ]

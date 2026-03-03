@@ -1,0 +1,5 @@
+[
+    {"name": "statusCode", "type": "uinteger", "label": "Status code"},
+    {"name": "headers", "type": "collection", "label": "Headers", "spec": []},
+    {"name": "body", "type": "any", "label": "Body"}
+]

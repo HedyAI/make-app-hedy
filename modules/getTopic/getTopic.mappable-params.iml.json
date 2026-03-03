@@ -3,7 +3,7 @@
         "name": "topicId",
         "type": "text",
         "label": "Topic ID",
-        "help": "The ID of the topic.",
+        "help": "The ID of the topic. You can get this from the List Topics module or Watch Events trigger.",
         "required": true
     }
 ]
