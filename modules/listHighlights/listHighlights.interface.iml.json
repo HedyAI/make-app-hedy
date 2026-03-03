@@ -1,5 +1,5 @@
 [
-    {"name": "id", "type": "text", "label": "Highlight ID"},
+    {"name": "highlightId", "type": "text", "label": "Highlight ID"},
     {"name": "sessionId", "type": "text", "label": "Session ID"},
     {"name": "timestamp", "type": "date", "label": "Timestamp"},
     {"name": "title", "type": "text", "label": "Title"},

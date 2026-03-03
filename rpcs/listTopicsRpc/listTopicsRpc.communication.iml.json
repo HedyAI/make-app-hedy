@@ -2,7 +2,7 @@
     "url": "/topics",
     "method": "GET",
     "response": {
-        "iterate": "{{body}}",
+        "iterate": "{{body.data}}",
         "output": {
             "label": "{{item.name}}",
             "value": "{{item.id}}"

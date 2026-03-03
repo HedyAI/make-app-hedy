@@ -7,7 +7,7 @@
     },
     "response": {
         "data": {
-            "webhookId": "{{body.id}}"
+            "webhookId": "{{body.data.id}}"
         }
     }
 }

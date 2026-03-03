@@ -3,7 +3,7 @@
     "method": "GET",
     "response": {
         "output": "{{item}}",
-        "iterate": "{{body}}",
+        "iterate": "{{body.data}}",
         "limit": "{{ifempty(parameters.limit, 10)}}"
     }
 }

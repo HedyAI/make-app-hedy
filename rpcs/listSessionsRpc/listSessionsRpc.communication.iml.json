@@ -9,7 +9,7 @@
         "iterate": "{{body.data}}",
         "output": {
             "label": "{{item.title}}",
-            "value": "{{item.id}}"
+            "value": "{{item.sessionId}}"
         }
     }
 }
