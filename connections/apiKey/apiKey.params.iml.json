@@ -2,8 +2,9 @@
     {
         "name": "apiKey",
         "type": "text",
-        "label": "API Key",
+        "label": "API key",
         "help": "Go to Hedy → Settings → API → Generate New Key",
-        "required": true
+        "required": true,
+        "editable": true
     }
 ]
