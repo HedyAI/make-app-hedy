@@ -1,5 +1,5 @@
 {
-    "url": "/{{trimLeft(parameters.url, '/')}}",
+    "url": "/{{parameters.url}}",
     "method": "{{parameters.method}}",
     "qs": "{{toCollection(parameters.qs, 'key', 'value')}}",
     "body": "{{parameters.body}}",

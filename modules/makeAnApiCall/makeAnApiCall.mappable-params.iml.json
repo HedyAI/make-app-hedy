@@ -3,7 +3,7 @@
         "name": "url",
         "type": "text",
         "label": "URL",
-        "help": "Enter the path relative to `https://api.hedy.bot/`. For example, `sessions`.",
+        "help": "Enter the endpoint path without a leading slash. For example, `sessions` or `sessions/abc123`.",
         "required": true
     },
     {
