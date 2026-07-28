@@ -1,4 +1,4 @@
 {
-    "url": "/webhooks/{{data.webhookId}}",
+    "url": "/webhooks/{{webhook.webhookId}}",
     "method": "DELETE"
 }
