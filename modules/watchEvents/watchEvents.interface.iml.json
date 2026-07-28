@@ -20,6 +20,9 @@
     {"name": "meeting_minutes", "type": "text", "label": "Meeting minutes"},
     {"name": "recap", "type": "text", "label": "Recap"},
     {"name": "session_notes", "type": "text", "label": "Session notes"},
+    {"name": "topicId", "type": "text", "label": "Topic ID"},
+    {"name": "topicName", "type": "text", "label": "Topic name"},
+    {"name": "topicInsights", "type": "text", "label": "Topic insights"},
     {
         "name": "highlights", "type": "array", "label": "Highlights",
         "spec": [

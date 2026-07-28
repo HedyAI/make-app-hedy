@@ -205,12 +205,19 @@ describe('Review item 16: the format parameter only accepts "zapier"', () => {
 });
 
 describe('Review item 9: the webhook payload is flat, not wrapped in "data"', () => {
-  // Verified against three real queued deliveries in the Make webhook queue for
-  // hook 1958024 (session.ended, 2026-07-17 → 2026-07-21). All three had the
-  // identical top-level key set below, with no `data` wrapper and no `timestamp`.
+  // Verified two ways:
+  //  1. Empirically, against real queued deliveries in the Make webhook queue
+  //     for hook 1958024 (session.ended, 2026-07-17 → 2026-07-21), which all
+  //     had the ALWAYS_PRESENT key set below — no `data` wrapper, no top-level
+  //     `timestamp`.
+  //  2. Against the dispatcher itself, hedy_mobile/functions/src/webhooks.ts,
+  //     which builds the delivered body as `{ event, ...webhookEvent.data }`.
+  //     That confirms the flat shape holds for EVERY event type, not just the
+  //     session.ended deliveries we happened to sample.
+  //
   // Note the webhook uses `sessionType` (camelCase) where the REST API returns
-  // `session_type`, and it carries no topic fields at all.
-  const OBSERVED_KEYS = [
+  // `session_type`.
+  const ALWAYS_PRESENT = [
     'event',
     'sessionId',
     'title',
@@ -227,8 +234,16 @@ describe('Review item 9: the webhook payload is flat, not wrapped in "data"', ()
     'highlights',
   ];
 
-  test('watchEvents interface matches the observed delivery exactly', () => {
-    expect(fieldNames('watchEvents').sort()).toEqual([...OBSERVED_KEYS].sort());
+  // Sent only when the session is linked to a topic, per the SessionData
+  // interface in webhooks.ts and the /webhooks documentation. Every delivery we
+  // sampled happened to be for an untopiced session, which is why they looked
+  // absent — declaring them is correct, omitting them loses real data.
+  const TOPIC_FIELDS = ['topicId', 'topicName', 'topicInsights'];
+
+  test('watchEvents interface declares every documented top-level field', () => {
+    expect(fieldNames('watchEvents').sort()).toEqual(
+      [...ALWAYS_PRESENT, ...TOPIC_FIELDS].sort()
+    );
   });
 
   test('no field is namespaced under data.', () => {
@@ -237,12 +252,14 @@ describe('Review item 9: the webhook payload is flat, not wrapped in "data"', ()
     }
   });
 
-  test('the disproven flat topic fields are gone', () => {
-    // The review assumed the webhook carried flat topicId/topicName. Real
-    // deliveries carry neither, so declaring them would resolve empty.
+  test('the conditional flat topic fields are declared', () => {
+    // These are flat on the webhook (topicId/topicName) even though the REST
+    // API nests an equivalent `topic` object — the two shapes genuinely differ.
     const names = fieldNames('watchEvents');
-    expect(names).not.toContain('topicId');
-    expect(names).not.toContain('topicName');
+    for (const field of TOPIC_FIELDS) {
+      expect(names).toContain(field);
+    }
+    expect(names).not.toContain('topic');
   });
 
   test('structured_conversations timestamp is a number (epoch ms), not a date', () => {

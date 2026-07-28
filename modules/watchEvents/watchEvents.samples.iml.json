@@ -19,6 +19,9 @@
     "meeting_minutes": "## Key Decisions\n- Launch date set for March 15",
     "recap": "Team discussed Q1 priorities and blockers.",
     "session_notes": "[{\"insert\":\"Remember to loop in QA before the launch.\\n\"}]",
+    "topicId": "topic_xyz",
+    "topicName": "Team Meetings",
+    "topicInsights": "{\"overviewParagraphs\":[\"Recent standups have focused on launch readiness.\"]}",
     "highlights": [
         {
             "highlightId": "high_def456",
