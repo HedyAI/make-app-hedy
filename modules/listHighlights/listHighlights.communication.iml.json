@@ -2,8 +2,7 @@
     "url": "/highlights",
     "method": "GET",
     "qs": {
-        "limit": "{{ifempty(parameters.limit, 10)}}",
-        "format": "standard"
+        "limit": "{{if(ifempty(parameters.limit, 10) > 100, 100, ifempty(parameters.limit, 10))}}"
     },
     "response": {
         "output": "{{item}}",

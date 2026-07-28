@@ -3,5 +3,20 @@
     "name": "Team Meetings",
     "description": "Weekly standups and team syncs",
     "color": "#4A90D9",
-    "iconName": "group"
+    "iconName": "group",
+    "topicContext": "Focus on action items and blockers",
+    "topicContextUpdatedAt": "2026-02-20T09:00:00Z",
+    "createdAt": "2026-01-15T10:00:00Z",
+    "updatedAt": "2026-03-01T08:30:00Z",
+    "overview": {
+        "topicName": "Team Meetings",
+        "sessionType": "meeting",
+        "overviewParagraphs": [
+            "Recent standups have focused on launch readiness and QA coverage."
+        ]
+    },
+    "overviewUpdatedAt": "2026-03-01T08:30:00Z",
+    "dominantSessionType": "meeting",
+    "sessionCount": 12,
+    "lastSessionDate": "2026-03-03T14:00:00Z"
 }

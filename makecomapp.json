@@ -147,14 +147,14 @@
         },
         "rpc": {
             "listTopicsRpc": {
-                "label": "List Topics",
+                "label": "List topics",
                 "connection": "apiKey",
                 "codeFiles": {
                     "communication": "rpcs/listTopicsRpc/listTopicsRpc.communication.iml.json"
                 }
             },
             "listSessionsRpc": {
-                "label": "List Sessions",
+                "label": "List sessions",
                 "connection": "apiKey",
                 "codeFiles": {
                     "communication": "rpcs/listSessionsRpc/listSessionsRpc.communication.iml.json"

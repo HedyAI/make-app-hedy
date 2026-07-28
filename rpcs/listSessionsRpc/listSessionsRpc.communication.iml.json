@@ -2,14 +2,20 @@
     "url": "/sessions",
     "method": "GET",
     "qs": {
-        "limit": "50",
-        "format": "standard"
+        "limit": "100"
     },
     "response": {
         "iterate": "{{body.data}}",
         "output": {
             "label": "{{item.title}}",
             "value": "{{item.sessionId}}"
-        }
+        },
+        "limit": 300
+    },
+    "pagination": {
+        "qs": {
+            "after": "{{body.pagination.next}}"
+        },
+        "condition": "{{body.pagination.hasMore}}"
     }
 }

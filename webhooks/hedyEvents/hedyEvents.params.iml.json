@@ -2,15 +2,17 @@
     {
         "name": "events",
         "type": "select",
-        "label": "Event",
+        "label": "Events",
         "help": "Select the event types you want to receive notifications for.",
         "required": true,
         "multiple": true,
         "options": [
-            {"label": "Session Created", "value": "session.created"},
-            {"label": "Session Ended", "value": "session.ended"},
-            {"label": "Highlight Created", "value": "highlight.created"},
-            {"label": "Todo Exported", "value": "todo.exported"}
+            {"label": "Session created", "value": "session.created"},
+            {"label": "Session ended", "value": "session.ended"},
+            {"label": "Session exported", "value": "session.exported"},
+            {"label": "Highlight created", "value": "highlight.created"},
+            {"label": "Todo exported", "value": "todo.exported"},
+            {"label": "Suggestion created", "value": "suggestion.created"}
         ]
     }
 ]

@@ -2,6 +2,7 @@
     "highlightId": "high_def456",
     "sessionId": "sess_abc123",
     "timestamp": "2026-03-03T14:12:00Z",
+    "timeIndex": 720000,
     "title": "Launch Date Decision",
     "rawQuote": "let's go with march 15th for the launch",
     "cleanedQuote": "Let's go with March 15th for the launch.",

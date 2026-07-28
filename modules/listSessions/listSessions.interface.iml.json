@@ -1,8 +1,20 @@
 [
     {"name": "sessionId", "type": "text", "label": "Session ID"},
     {"name": "title", "type": "text", "label": "Title"},
-    {"name": "startTime", "type": "date", "label": "Start Time"},
+    {"name": "startTime", "type": "date", "label": "Start time"},
     {"name": "duration", "type": "number", "label": "Duration (seconds)"},
-    {"name": "topicId", "type": "text", "label": "Topic ID"},
-    {"name": "topicName", "type": "text", "label": "Topic Name"}
+    {"name": "session_type", "type": "text", "label": "Session type"},
+    {
+        "name": "topic", "type": "collection", "label": "Topic",
+        "spec": [
+            {"name": "id", "type": "text", "label": "Topic ID"},
+            {"name": "name", "type": "text", "label": "Name"},
+            {"name": "description", "type": "text", "label": "Description"},
+            {"name": "color", "type": "text", "label": "Color"},
+            {"name": "iconName", "type": "text", "label": "Icon name"},
+            {"name": "topicContext", "type": "text", "label": "Topic context"},
+            {"name": "createdAt", "type": "date", "label": "Created at"},
+            {"name": "updatedAt", "type": "date", "label": "Updated at"}
+        ]
+    }
 ]

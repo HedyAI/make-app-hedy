@@ -22,6 +22,24 @@
         ]
     },
     {
+        "name": "headers",
+        "type": "array",
+        "label": "Headers",
+        "help": "You don't have to add authorization headers; we already did that for you.",
+        "spec": [
+            {
+                "name": "key",
+                "type": "text",
+                "label": "Key"
+            },
+            {
+                "name": "value",
+                "type": "text",
+                "label": "Value"
+            }
+        ]
+    },
+    {
         "name": "qs",
         "type": "array",
         "label": "Query string",
@@ -40,21 +58,9 @@
         ]
     },
     {
-        "name": "bodyType",
-        "type": "select",
-        "label": "Body type",
-        "default": "json",
-        "options": [
-            {"label": "JSON", "value": "json"},
-            {"label": "Raw", "value": "raw"},
-            {"label": "Form data (multipart)", "value": "multipart"},
-            {"label": "Form data (urlencoded)", "value": "urlencoded"}
-        ]
-    },
-    {
         "name": "body",
-        "type": "text",
+        "type": "any",
         "label": "Body",
-        "help": "Enter the request body content."
+        "help": "Enter the request body as JSON. The Hedy API accepts JSON request bodies only."
     }
 ]

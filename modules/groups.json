@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "label": "Events",
+        "modules": ["watchEvents"]
+    },
+    {
+        "label": "Sessions",
+        "modules": ["listSessions", "getSession"]
+    },
+    {
+        "label": "Highlights",
+        "modules": ["listHighlights", "getHighlight"]
+    },
+    {
+        "label": "Topics",
+        "modules": ["listTopics", "getTopic"]
+    },
+    {
+        "label": "Todos",
+        "modules": ["listTodos"]
+    },
+    {
+        "label": "Other",
+        "modules": ["makeAnApiCall"]
+    }
+]

@@ -16,10 +16,10 @@ beforeAll(async () => {
 
 describe('listSessions', () => {
   // Mirrors: modules/listSessions/listSessions.communication.iml.json
-  // GET /sessions?limit=N&format=standard
+  // GET /sessions?limit=N
 
   test('returns paginated response with data array and pagination', async () => {
-    const { status, body } = await client.get('/sessions', { limit: 2, format: 'standard' });
+    const { status, body } = await client.get('/sessions', { limit: 2 });
 
     expect(status).toBe(200);
     expect(body).toHaveProperty('data');
@@ -30,7 +30,7 @@ describe('listSessions', () => {
   });
 
   test('each session matches listSessions interface', async () => {
-    const { body } = await client.get('/sessions', { limit: 3, format: 'standard' });
+    const { body } = await client.get('/sessions', { limit: 3 });
 
     for (const session of body.data) {
       expectMatchesInterface(session, 'listSessions');
@@ -38,13 +38,13 @@ describe('listSessions', () => {
   });
 
   test('limit parameter controls result count', async () => {
-    const { body } = await client.get('/sessions', { limit: 1, format: 'standard' });
+    const { body } = await client.get('/sessions', { limit: 1 });
 
     expect(body.data.length).toBeLessThanOrEqual(1);
   });
 
   test('pagination provides next cursor when hasMore is true', async () => {
-    const { body } = await client.get('/sessions', { limit: 2, format: 'standard' });
+    const { body } = await client.get('/sessions', { limit: 2 });
 
     if (!body.pagination.hasMore) {
       console.warn('SKIPPED: Only one page of sessions available');
@@ -58,7 +58,6 @@ describe('listSessions', () => {
     // Verify cursor is accepted by the API (doesn't error)
     const page2 = await client.get('/sessions', {
       limit: 2,
-      format: 'standard',
       after: body.pagination.next,
     });
 
@@ -92,10 +91,10 @@ describe('getSession', () => {
 
 describe('listSessionsRpc', () => {
   // Mirrors: rpcs/listSessionsRpc/listSessionsRpc.communication.iml.json
-  // GET /sessions?limit=50&format=standard → { label: item.title, value: item.sessionId }
+  // GET /sessions?limit=100 with pagination → { label: item.title, value: item.sessionId }
 
   test('each session has title and sessionId for dropdown mapping', async () => {
-    const { body } = await client.get('/sessions', { limit: 5, format: 'standard' });
+    const { body } = await client.get('/sessions', { limit: 5 });
 
     for (const session of body.data) {
       expect(typeof (session.title ?? '')).toBe('string');

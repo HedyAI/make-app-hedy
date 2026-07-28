@@ -8,9 +8,9 @@ async function getFixtures(client) {
   if (fixtures) return fixtures;
 
   const [sessions, topics, highlights] = await Promise.all([
-    client.get('/sessions', { limit: 1, format: 'standard' }),
+    client.get('/sessions', { limit: 1 }),
     client.get('/topics'),
-    client.get('/highlights', { limit: 1, format: 'standard' }),
+    client.get('/highlights', { limit: 1 }),
   ]);
 
   fixtures = {

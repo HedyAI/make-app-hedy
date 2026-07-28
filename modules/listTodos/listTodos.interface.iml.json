@@ -2,6 +2,18 @@
     {"name": "id", "type": "text", "label": "Todo ID"},
     {"name": "sessionId", "type": "text", "label": "Session ID"},
     {"name": "text", "type": "text", "label": "Text"},
-    {"name": "dueDate", "type": "date", "label": "Due Date"},
-    {"name": "completed", "type": "boolean", "label": "Completed"}
+    {"name": "dueDate", "type": "text", "label": "Due date"},
+    {"name": "completed", "type": "boolean", "label": "Completed"},
+    {
+        "name": "topic", "type": "collection", "label": "Topic",
+        "spec": [
+            {"name": "id", "type": "text", "label": "Topic ID"},
+            {"name": "name", "type": "text", "label": "Name"},
+            {"name": "description", "type": "text", "label": "Description"},
+            {"name": "color", "type": "text", "label": "Color"},
+            {"name": "iconName", "type": "text", "label": "Icon name"},
+            {"name": "createdAt", "type": "date", "label": "Created at"},
+            {"name": "updatedAt", "type": "date", "label": "Updated at"}
+        ]
+    }
 ]

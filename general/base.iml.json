@@ -1,16 +1,20 @@
 {
-    "baseUrl": "https://api.hedy.bot",
+    "baseUrl": "{{ifempty(connection.baseUrl, 'https://api.hedy.bot')}}",
     "headers": {
         "Authorization": "Bearer {{connection.apiKey}}",
         "Content-Type": "application/json"
     },
     "response": {
         "error": {
-            "message": "[{{statusCode}}] {{body.error.message}}",
+            "message": "[{{statusCode}}] {{ifempty(body.error.message, 'The Hedy API returned an unexpected error. Please try again, and contact support@hedy.bot if the problem persists.')}}",
             "type": "RuntimeError",
             "401": {
                 "type": "InvalidAccessTokenError",
                 "message": "Invalid or expired API key. Generate a new one in Hedy → Settings → API."
+            },
+            "403": {
+                "type": "RuntimeError",
+                "message": "The Hedy API requires an active Pro subscription. Upgrade your Hedy plan, then try again."
             },
             "429": {
                 "type": "RateLimitError",
