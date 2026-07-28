@@ -5,10 +5,35 @@
     {"name": "startTime", "type": "date", "label": "Start time"},
     {"name": "endTime", "type": "date", "label": "End time"},
     {"name": "duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "sessionType", "type": "text", "label": "Session type"},
     {"name": "transcript", "type": "text", "label": "Transcript"},
-    {"name": "recap", "type": "text", "label": "Recap"},
+    {"name": "conversations", "type": "text", "label": "Conversations"},
+    {
+        "name": "structured_conversations", "type": "array", "label": "Structured conversations",
+        "spec": [
+            {"name": "type", "type": "text", "label": "Type"},
+            {"name": "question", "type": "text", "label": "Question"},
+            {"name": "answer", "type": "text", "label": "Answer"},
+            {"name": "timestamp", "type": "number", "label": "Timestamp (epoch ms)"}
+        ]
+    },
     {"name": "meeting_minutes", "type": "text", "label": "Meeting minutes"},
-    {"name": "highlights", "type": "array", "label": "Highlights", "spec": []},
+    {"name": "recap", "type": "text", "label": "Recap"},
+    {"name": "session_notes", "type": "text", "label": "Session notes"},
     {"name": "topicId", "type": "text", "label": "Topic ID"},
-    {"name": "topicName", "type": "text", "label": "Topic name"}
+    {"name": "topicName", "type": "text", "label": "Topic name"},
+    {"name": "topicInsights", "type": "text", "label": "Topic insights"},
+    {
+        "name": "highlights", "type": "array", "label": "Highlights",
+        "spec": [
+            {"name": "highlightId", "type": "text", "label": "Highlight ID"},
+            {"name": "timestamp", "type": "date", "label": "Timestamp"},
+            {"name": "timeIndex", "type": "number", "label": "Time index (ms from session start)"},
+            {"name": "title", "type": "text", "label": "Title"},
+            {"name": "rawQuote", "type": "text", "label": "Raw quote"},
+            {"name": "cleanedQuote", "type": "text", "label": "Cleaned quote"},
+            {"name": "mainIdea", "type": "text", "label": "Main idea"},
+            {"name": "aiInsight", "type": "text", "label": "AI insight"}
+        ]
+    }
 ]

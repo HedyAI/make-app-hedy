@@ -6,6 +6,7 @@
         "output": {
             "label": "{{item.name}}",
             "value": "{{item.id}}"
-        }
+        },
+        "limit": 300
     }
 }

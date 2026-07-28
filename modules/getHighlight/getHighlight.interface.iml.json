@@ -2,9 +2,10 @@
     {"name": "highlightId", "type": "text", "label": "Highlight ID"},
     {"name": "sessionId", "type": "text", "label": "Session ID"},
     {"name": "timestamp", "type": "date", "label": "Timestamp"},
+    {"name": "timeIndex", "type": "number", "label": "Time index (ms from session start)"},
     {"name": "title", "type": "text", "label": "Title"},
-    {"name": "rawQuote", "type": "text", "label": "Raw Quote"},
-    {"name": "cleanedQuote", "type": "text", "label": "Cleaned Quote"},
-    {"name": "mainIdea", "type": "text", "label": "Main Idea"},
-    {"name": "aiInsight", "type": "text", "label": "AI Insight"}
+    {"name": "rawQuote", "type": "text", "label": "Raw quote"},
+    {"name": "cleanedQuote", "type": "text", "label": "Cleaned quote"},
+    {"name": "mainIdea", "type": "text", "label": "Main idea"},
+    {"name": "aiInsight", "type": "text", "label": "AI insight"}
 ]

@@ -1,19 +1,29 @@
 {
-    "url": "https://api.hedy.bot/me",
+    "url": "{{switch(parameters.region, 'eu', 'https://eu-api.hedy.bot', 'https://api.hedy.bot')}}/me",
     "method": "GET",
     "headers": {
         "Authorization": "Bearer {{parameters.apiKey}}"
     },
     "response": {
         "data": {
-            "apiKey": "{{parameters.apiKey}}"
+            "apiKey": "{{parameters.apiKey}}",
+            "region": "{{ifempty(parameters.region, 'us')}}",
+            "baseUrl": "{{switch(parameters.region, 'eu', 'https://eu-api.hedy.bot', 'https://api.hedy.bot')}}"
         },
         "metadata": {
             "type": "email",
             "value": "{{body.email}}"
         },
         "error": {
-            "message": "[{{statusCode}}] {{body.error.message}}"
+            "message": "[{{statusCode}}] {{ifempty(body.error.message, 'Could not verify the API key. Check that the key is valid and that the selected region matches your Hedy account.')}}",
+            "401": {
+                "type": "InvalidAccessTokenError",
+                "message": "Invalid API key. Copy a fresh key from Hedy → Settings → API → Generate New Key."
+            },
+            "403": {
+                "type": "RuntimeError",
+                "message": "This Hedy account doesn't have an active Pro subscription, which the Hedy API requires. Upgrade your Hedy plan, then create the connection again."
+            }
         }
     },
     "log": {

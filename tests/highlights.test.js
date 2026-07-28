@@ -16,10 +16,10 @@ beforeAll(async () => {
 
 describe('listHighlights', () => {
   // Mirrors: modules/listHighlights/listHighlights.communication.iml.json
-  // GET /highlights?limit=N&format=standard
+  // GET /highlights?limit=N
 
   test('returns paginated response with data array and pagination', async () => {
-    const { status, body } = await client.get('/highlights', { limit: 2, format: 'standard' });
+    const { status, body } = await client.get('/highlights', { limit: 2 });
 
     expect(status).toBe(200);
     expect(body).toHaveProperty('data');
@@ -29,7 +29,7 @@ describe('listHighlights', () => {
   });
 
   test('each highlight matches listHighlights interface', async () => {
-    const { body } = await client.get('/highlights', { limit: 3, format: 'standard' });
+    const { body } = await client.get('/highlights', { limit: 3 });
 
     for (const highlight of body.data) {
       expectMatchesInterface(highlight, 'listHighlights');
@@ -37,7 +37,7 @@ describe('listHighlights', () => {
   });
 
   test('pagination cursor returns next page', async () => {
-    const page1 = await client.get('/highlights', { limit: 2, format: 'standard' });
+    const page1 = await client.get('/highlights', { limit: 2 });
 
     if (!page1.body.pagination.hasMore) {
       console.warn('SKIPPED: Only one page of highlights available');
@@ -46,7 +46,6 @@ describe('listHighlights', () => {
 
     const page2 = await client.get('/highlights', {
       limit: 2,
-      format: 'standard',
       after: page1.body.pagination.next,
     });
 

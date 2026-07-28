@@ -13,7 +13,7 @@ beforeAll(() => {
 describe('Error handling', () => {
   test('401 with invalid Bearer token', async () => {
     const badClient = new HedyApiClient('invalid_key_xxx');
-    const { status } = await badClient.get('/sessions', { limit: 1, format: 'standard' });
+    const { status } = await badClient.get('/sessions', { limit: 1 });
 
     expect(status).toBe(401);
   });

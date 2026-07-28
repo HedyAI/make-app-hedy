@@ -1,9 +1,11 @@
 [
     {
         "name": "topicId",
-        "type": "text",
+        "type": "select",
         "label": "Topic ID",
-        "help": "The ID of the topic. You can get this from the List Topics module or Watch Events trigger.",
-        "required": true
+        "help": "Select a topic, or map the ID of the topic you want to retrieve. You can also get this from the List topics module.",
+        "required": true,
+        "options": "rpc://listTopicsRpc",
+        "mode": "edit"
     }
 ]

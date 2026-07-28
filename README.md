@@ -11,10 +11,12 @@ Hedy helps you be the brightest person in the room by providing real-time transc
 
 ### Watch Events (Trigger)
 Receives real-time webhook notifications when events occur in Hedy:
-- **Session Created** — When a new meeting session starts
-- **Session Ended** — When a meeting session completes
-- **Highlight Created** — When a highlight is created during a meeting
-- **Todo Exported** — When a todo item is exported
+- **Session created** — When a new meeting session starts
+- **Session ended** — When a meeting session completes
+- **Session exported** — When a session is exported
+- **Highlight created** — When a highlight is created during a meeting
+- **Todo exported** — When a todo item is exported
+- **Suggestion created** — When Hedy generates a suggestion
 
 ### Get a Session
 Retrieve detailed session information including transcript, highlights, and todos.
@@ -46,6 +48,11 @@ Perform a custom API call to any Hedy endpoint for advanced use cases.
 2. Click **Generate New Key**
 3. Copy the API key (starts with `hedy_live_`)
 4. In Make, create a new Hedy connection and paste your API key
+5. Choose your **Region** — *United States* (`api.hedy.bot`, the default) or *European Union*
+   (`eu-api.hedy.bot`) if your account uses EU data residency
+
+The region is stored on the connection and selects the API host for every module.
+Connections created before region support was added continue to use the US host.
 
 ## Example Scenarios
 

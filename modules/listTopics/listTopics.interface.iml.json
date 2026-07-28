@@ -3,5 +3,21 @@
     {"name": "name", "type": "text", "label": "Name"},
     {"name": "description", "type": "text", "label": "Description"},
     {"name": "color", "type": "text", "label": "Color"},
-    {"name": "iconName", "type": "text", "label": "Icon Name"}
+    {"name": "iconName", "type": "text", "label": "Icon name"},
+    {"name": "topicContext", "type": "text", "label": "Topic context"},
+    {"name": "topicContextUpdatedAt", "type": "date", "label": "Topic context updated at"},
+    {"name": "createdAt", "type": "date", "label": "Created at"},
+    {"name": "updatedAt", "type": "date", "label": "Updated at"},
+    {
+        "name": "overview", "type": "collection", "label": "Overview",
+        "spec": [
+            {"name": "topicName", "type": "text", "label": "Topic name"},
+            {"name": "sessionType", "type": "text", "label": "Session type"},
+            {"name": "overviewParagraphs", "type": "array", "label": "Overview paragraphs", "spec": {"type": "text"}}
+        ]
+    },
+    {"name": "overviewUpdatedAt", "type": "date", "label": "Overview updated at"},
+    {"name": "dominantSessionType", "type": "text", "label": "Dominant session type"},
+    {"name": "sessionCount", "type": "number", "label": "Session count"},
+    {"name": "lastSessionDate", "type": "date", "label": "Last session date"}
 ]

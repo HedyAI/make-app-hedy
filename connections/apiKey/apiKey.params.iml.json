@@ -1,10 +1,22 @@
 [
     {
         "name": "apiKey",
-        "type": "text",
+        "type": "password",
         "label": "API key",
         "help": "Go to Hedy → Settings → API → Generate New Key",
         "required": true,
         "editable": true
+    },
+    {
+        "name": "region",
+        "type": "select",
+        "label": "Region",
+        "help": "The region your Hedy account is hosted in. Choose European Union if your account uses EU data residency.",
+        "required": true,
+        "default": "us",
+        "options": [
+            {"label": "United States", "value": "us"},
+            {"label": "European Union", "value": "eu"}
+        ]
     }
 ]

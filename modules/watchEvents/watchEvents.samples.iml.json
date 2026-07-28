@@ -2,13 +2,36 @@
     "event": "session.ended",
     "sessionId": "sess_abc123",
     "title": "Weekly Team Standup",
-    "startTime": "2026-03-03T14:00:00Z",
-    "endTime": "2026-03-03T14:30:00Z",
+    "startTime": "2026-03-03T14:00:00.953635Z",
+    "endTime": "2026-03-03T14:30:00.531644Z",
     "duration": 1800,
-    "transcript": "Good morning everyone...",
-    "recap": "Team discussed Q1 priorities and blockers.",
+    "sessionType": "meeting",
+    "transcript": "Good morning everyone. Let's go through our updates...",
+    "conversations": "Q: What's the status of the launch?\nA: On track for March 15.",
+    "structured_conversations": [
+        {
+            "type": "suggestion",
+            "question": null,
+            "answer": "The launch date is now committed. Confirm QA has capacity before the call ends.",
+            "timestamp": 1784642731477
+        }
+    ],
     "meeting_minutes": "## Key Decisions\n- Launch date set for March 15",
-    "highlights": [],
+    "recap": "Team discussed Q1 priorities and blockers.",
+    "session_notes": "[{\"insert\":\"Remember to loop in QA before the launch.\\n\"}]",
     "topicId": "topic_xyz",
-    "topicName": "Team Meetings"
+    "topicName": "Team Meetings",
+    "topicInsights": "{\"overviewParagraphs\":[\"Recent standups have focused on launch readiness.\"]}",
+    "highlights": [
+        {
+            "highlightId": "high_def456",
+            "timestamp": "2026-03-03T14:12:00Z",
+            "timeIndex": 720000,
+            "title": "Launch Date Decision",
+            "rawQuote": "let's go with march 15th for the launch",
+            "cleanedQuote": "Let's go with March 15th for the launch.",
+            "mainIdea": "Launch date confirmed",
+            "aiInsight": "Team aligned on an aggressive timeline."
+        }
+    ]
 }
