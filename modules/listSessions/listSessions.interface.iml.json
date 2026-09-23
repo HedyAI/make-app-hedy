@@ -2,7 +2,7 @@
     {"name": "sessionId", "type": "text", "label": "Session ID"},
     {"name": "title", "type": "text", "label": "Title"},
     {"name": "startTime", "type": "date", "label": "Start time"},
-    {"name": "duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "duration", "type": "number", "label": "Duration (minutes)"},
     {"name": "session_type", "type": "text", "label": "Session type"},
     {
         "name": "topic", "type": "collection", "label": "Topic",

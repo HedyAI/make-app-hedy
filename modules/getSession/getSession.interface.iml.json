@@ -3,7 +3,7 @@
     {"name": "title", "type": "text", "label": "Title"},
     {"name": "startTime", "type": "date", "label": "Start time"},
     {"name": "endTime", "type": "date", "label": "End time"},
-    {"name": "duration", "type": "number", "label": "Duration (seconds)"},
+    {"name": "duration", "type": "number", "label": "Duration (minutes)"},
     {"name": "session_type", "type": "text", "label": "Session type"},
     {"name": "transcript", "type": "text", "label": "Transcript"},
     {"name": "cleaned_transcript", "type": "text", "label": "Cleaned transcript"},

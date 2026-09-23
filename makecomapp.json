@@ -166,14 +166,14 @@
         {
             "label": "Production",
             "baseUrl": "https://us2.make.com/api",
-            "appId": "hedy-p0dkfb",
+            "appId": "hedy",
             "appVersion": 1,
             "apikeyFile": ".secrets/apikey",
             "idMapping": {
                 "connection": [
                     {
                         "local": "apiKey",
-                        "remote": "hedy-p0dkfb"
+                        "remote": "hedy"
                     }
                 ],
                 "module": [
@@ -228,7 +228,7 @@
                 "webhook": [
                     {
                         "local": "hedyEvents",
-                        "remote": "hedy-p0dkfb"
+                        "remote": "hedy"
                     }
                 ]
             }
